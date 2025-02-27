@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistec - Login</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-switch">
+        <button id="themeToggle" aria-label="Alternar tema">
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+
+    <div class="login-container">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-tools"></i>
+            </div>
+            <h1>Assistec</h1>
+            <p>Portal de Assistência Técnica</p>
+        </div>
+
+        <form id="loginForm" class="login-form" action="../php/autenticar.php" method="post">
+            <div class="form-group">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="email" id="username" name="email" required autocomplete="email" placeholder="Email">
+                </div>
+                <span class="error-message" id="usernameError"></span>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" required autocomplete="current-password" name="senha" placeholder="Senha">
+                    <button type="button" class="toggle-password" aria-label="Mostrar senha">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <span class="error-message" id="passwordError"></span>
+            </div>
+
+            <div class="form-options">
+                <label class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <span>Lembrar-me</span>
+                </label>
+                <a href="#" class="forgot-password">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" name="submit" class="login-btn">
+                <span>Entrar</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+
+            <div class="separator">
+                <span>ou</span>
+            </div>
+
+            <button type="button" class="google-btn">
+            
+                <span>Continuar com Google</span>
+            </button>
+        </form>
+
+        <div class="register-link">
+            <p>Não tem uma conta? <a href="#">Registre-se</a></p>
+        </div>
+    </div>
+
+    <div class="notifications" id="notificationsContainer"></div>
+
+    <script src="./js/theme.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Dashboard para empresas
+# Dashboard para empresas - Projeto estudantil sem objetivo de aplicação
 
 Descrição
 ---------
